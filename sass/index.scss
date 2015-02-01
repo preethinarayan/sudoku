@@ -1,0 +1,122 @@
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin unselectable () {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+
+	.main-con{
+		max-width: 800px;
+		margin: 30px auto;
+		text-align: center;
+		h1{
+			font-size: 30px;
+			font-weight: 400;
+		}
+		#error{
+			padding: 5px;
+			margin: 10px 10px 0 10px;
+		}
+		#actions{
+			padding-left: 0;		 
+		}
+	}
+	
+	li{
+    list-style: none;
+		margin: 10px;		
+		display: inline-block;
+		
+		.btn{	
+			color: #FFF;
+			width: 120px;
+		  @include border-radius(2px);
+			display: inline-block;
+		  padding: 10px 15px;
+		  font-weight: 500;
+		  font-family: inherit;
+		  font-size: 18px;
+		  text-transform: capitalize;
+		  text-align: center;
+		  &:focus {outline: none;}
+		  &::-moz-focus-inner {border:0;}
+			background-color: #FF8080;		
+			&:hover{
+		    background-color: #FF6666;		    
+		  }
+		}
+  }
+	
+	#sudoku-grid{
+    margin-top: 30px;
+
+		.section, .row {
+      white-space: nowrap;
+      font-size: 0;
+    }
+
+		.block {
+      display: inline-block;
+      border: 1px solid #101010;
+    }
+
+		.cell {
+      display: inline-block;
+      width: 50px;
+ 			height: 50px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid #995C00;
+		}
+		
+		input {
+      border: none;
+      margin: 0; 
+			padding: 0;
+      position: absolute;
+      top: 0; left: 0;
+      height: 100%; 
+			width: 100%;
+      font-size: 26px;
+      text-align: center;
+      background: #FFF;
+      color: #B28F47;
+      @include unselectable();
+			
+			&.given{
+				font-weight: 500;
+				color: #000;
+			}
+
+      &:focus {
+				outline: 0;
+        background: #FFD699;
+      }
+			&[readonly="readonly"] {
+				&:focus {
+					outline: 0;
+					background: #FFF;
+				}
+			}
+    }
+
+	}
+}

@@ -10,16 +10,11 @@ describe("Board", function(){
 					  [0,0,0,4,1,9,0,0,5],
 					  [0,0,0,0,8,0,0,7,9]];
 	beforeEach(function(){	
-		board = Sudoku.Board(generator, solver, boardId);
-	});
-	
-	it("should be able to reset", function(){
-		board.reset();
-		expect(board.inProgress()).toEqual(false);
+		board = Sudoku.Board(generator, solver, boardId, 3);
 	});
 	
 	it("should be able to find empty postions on the board", function(){
-		var emptyPositions = board.emptyPostions();
+		var emptyPositions = board.emptyPostions(generator);
 		expect(emptyPositions.length).toEqual(51);
 	});
 });

@@ -5,27 +5,42 @@
   		<meta charset="utf-8">
   		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<link rel="stylesheet" href="css/board.css">
 			<link rel="stylesheet" href="css/index.css">
 		</head>
 
 		<body>
 
-  		<div id="sudoku-grid"></div>
-			<ul id="actions">
-				<li>
-					<a href="#">Check Board</a>
-				</li>
-				<li>
-					<a href="#">Reset Board</a>
-				</li>
-				<li>
-					<a href="#">Solve Board</a>
-				</li>
-			</ul>
+			<div class="main-con">
+				<h1>Welcome! Let's play a game of Sudoku</h1>
+  			<div id="sudoku-grid"></div>
+				<div id="error"></div>
+				<ul id="actions">
+					<li>
+						<div id="check-board" class="btn">
+							Check Board
+						</div>
+					</li>
+					<li>
+						<div id="reset-board" class="btn">
+							Reset Board
+						</div>
+					</li>
+					<li>
+						<div id="solve-board" class="btn">
+							Solve Board
+						</div>
+					</li>
+				</ul>
+			</div>
 
 			<script src="lib/jquery.js"></script>
 			<script src="lib/underscore.js"></script>
+			
+			<script src="js/index.js"></script>
+			<script src="js/Board.js"></script>
+			<script src="js/Checker.js"></script>
+			<script src="js/Generator.js"></script>
+			<script src="js/Solver.js"></script>
 		</body>
 
 </html>
