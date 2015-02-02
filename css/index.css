@@ -3,10 +3,13 @@ input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0; }
 
+input[type=number] {
+  -moz-appearance: textfield; }
+
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
   body .main-con {
     max-width: 800px;
     margin: 30px auto;
@@ -23,7 +26,7 @@ body {
     list-style: none;
     margin: 10px;
     display: inline-block; }
-    body li .btn {
+    body li .button {
       color: #FFF;
       width: 120px;
       -webkit-border-radius: 2px;
@@ -36,13 +39,13 @@ body {
       font-size: 18px;
       text-transform: capitalize;
       text-align: center;
-      background-color: #FF8080; }
-      body li .btn:focus {
+      background-color: #ff8080; }
+      body li .button:focus {
         outline: none; }
-      body li .btn::-moz-focus-inner {
+      body li .button::-moz-focus-inner {
         border: 0; }
-      body li .btn:hover {
-        background-color: #FF6666; }
+      body li .button:hover {
+        background-color: #ff6666; }
   body #sudoku-grid {
     margin-top: 30px; }
     body #sudoku-grid .section, body #sudoku-grid .row {
@@ -57,30 +60,49 @@ body {
       height: 50px;
       overflow: hidden;
       position: relative;
-      border: 1px solid #995C00; }
+      border: 1px solid #995c00; }
     body #sudoku-grid input {
       border: none;
+      height: 100%;
+      width: 100%;
       margin: 0;
       padding: 0;
       position: absolute;
       top: 0;
       left: 0;
-      height: 100%;
-      width: 100%;
       font-size: 26px;
       text-align: center;
-      background: #FFF;
-      color: #B28F47;
+      background: white;
+      color: #b28f47;
       -webkit-touch-callout: none;
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none; }
       body #sudoku-grid input.given {
         font-weight: 500;
-        color: #000; }
-      body #sudoku-grid input:focus {
+        color: black; }
+      body #sudoku-grid input.select-focus {
         outline: 0;
-        background: #FFD699; }
+        background: #ffd699; }
       body #sudoku-grid input[readonly="readonly"]:focus {
         outline: 0;
-        background: #FFF; }
+        background: white; }
+      body #sudoku-grid input.select-row, body #sudoku-grid input.select-column {
+        background: #fff0d1; }
+      body #sudoku-grid input.select-similar {
+        background: #ffdb94; }
+  @media screen and (max-width: 480px) {
+    body .main-con {
+      max-width: 500px;
+      margin: 32px auto; }
+      body .main-con h1 {
+        font-size: 22px; }
+      body .main-con li .button {
+        font-size: 16px; }
+      body .main-con #sudoku-grid {
+        margin-top: 10px; }
+        body .main-con #sudoku-grid .cell {
+          width: 30px;
+          height: 30px; }
+        body .main-con #sudoku-grid input {
+          font-size: 22px; } }

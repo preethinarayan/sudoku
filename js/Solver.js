@@ -1,4 +1,5 @@
 var Sudoku = Sudoku || {};
+// solves a given board
 Sudoku.Solver = function(checker, boardSize){
 	var solver = {},
 		chk = checker, 
@@ -30,10 +31,6 @@ Sudoku.Solver = function(checker, boardSize){
 				}
 			}
 		}
-		
-		_.each(board, function(row){
-			console.log(row.join());
-		});
 		
 		return board;
 	}

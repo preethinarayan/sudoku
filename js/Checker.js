@@ -1,4 +1,5 @@
 var Sudoku = Sudoku || {}
+// Checks an input against the board for validaity
 Sudoku.Checker = function(blockSize){
 	var checker = {},
 		bSize = blockSize;
@@ -39,27 +40,6 @@ Sudoku.Checker = function(blockSize){
 		})
 		return _.isUndefined(value) ? true : false;
 	}
-	
-	// checker.checkBlock = function(board, row, column, value){
-	// 	var colStart = 0, rowStart = 0, squareSize = bSize;
-	// 	while(column >= colStart + squareSize){
-	// 		colStart += squareSize;
-	// 	}
-	// 	while(row >= rowStart + squareSize){
-	// 		rowStart += squareSize;
-	// 	}
-	// 	console.log("Row start is " + rowStart);
-	// 	console.log("Col start is " + colStart);
-	// 	for(var i=rowStart; i<rowStart+squareSize; i++){
-	// 		for(var j=colStart; j<colStart+squareSize; j++){
-	// 			if(board[i][j] === value){
-	// 				console.log("input value " + value);
-	// 				return false;
-	// 			}
-	// 		}
-	// 	}
-	// 	return true;
-	// }
 	
 	checker.withoutCell = function(board, row, column){
 		var newBoard = _.map(board, _.clone);

@@ -1,4 +1,5 @@
 var Sudoku = Sudoku || {}
+// Starting point
 $(document).ready(function(){
 	var generator = Sudoku.Generator,
 		checker = Sudoku.Checker(3),
@@ -7,6 +8,7 @@ $(document).ready(function(){
 	
 	board.create();
 	board.setActionHandlers();
+	board.setInputHandlers();
 })
 
 
