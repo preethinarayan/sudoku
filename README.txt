@@ -40,6 +40,8 @@ HTML
 
 I've used JQuery for DOM parsing and underscore for helper functions. I've tested the core algorithm using Jasmine. The tests can be run and the results can be seen on the SpecRunner.html page. I've used SASS gem to watch and convert index.cscc to index.css. 
 
+The reason I chose JQuery and Underscore is because they are good stable libraries which I've used in the past. I chose Jasmine for testing primarily because I've used it in the past. If time permitted I would have tried using other libraries like mocha. I've also used SASS to generate CSS and found it simple to use.  
+
 Running the puzzle
 -------------------
 
