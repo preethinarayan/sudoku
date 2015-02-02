@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Sudoku : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Sudoku</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/preethinarayan/sudoku">View on GitHub</a>
+
+          <h1 id="project_title">Sudoku</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/preethinarayan/sudoku/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/preethinarayan/sudoku/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="sudoku-puzzle" class="anchor" href="#sudoku-puzzle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sudoku Puzzle</h2>
+
+<p>This is a simple sudoku solver purely based on Javascript. Once the html page is loaded up you have the option to - </p>
+
+<p>a) Try solving the puzzle by putting in inputs 
+b) Try the solver on the page which solves the puzzle
+c) Check your input that you entered
+d) Reset the board if things go wrong</p>
+
+<h2>
+<a id="algorithm-used-to-solve-the-puzzle-" class="anchor" href="#algorithm-used-to-solve-the-puzzle-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Algorithm used to solve the puzzle </h2>
+
+<p>I've used a simple Sudoku solving algorithm by checking the row, column and block for the prior presence of the number being entered. I've used backtracking here to solve the puzzle. In terms of checking whether an input would lead to a valid solution a number of other techniques can be used as well (<a href="https://www.sudokuoftheday.com/techniques/">https://www.sudokuoftheday.com/techniques/</a>)</p>
+
+<h2>
+<a id="generator-used-in-the-puzzle" class="anchor" href="#generator-used-in-the-puzzle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generator used in the puzzle</h2>
+
+<p>I've used a hard coded puzzle here. If time had permitted I would have plugged in an implementation of a puzzle generator for Sudoku.(<a href="https://www.sudokuoftheday.com/techniques/">https://www.sudokuoftheday.com/techniques/</a>)</p>
+
+<h2>
+<a id="visual-cues-used-in-the-puzzle" class="anchor" href="#visual-cues-used-in-the-puzzle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Visual cues used in the puzzle</h2>
+
+<p>I've highlighted the row, column and cells with the same input value when a value is entered to help solve the puzzle. I've also limited the input to numbers.</p>
+
+<h2>
+<a id="browsers-supported" class="anchor" href="#browsers-supported" aria-hidden="true"><span class="octicon octicon-link"></span></a>Browsers supported</h2>
+
+<p>I've tested this solution on webkit browsers and firefox. Mobile Safari and Android browsers are supported as well.</p>
+
+<h2>
+<a id="technologies-used" class="anchor" href="#technologies-used" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technologies used</h2>
+
+<p>JQuery
+Underscore
+Jasmine
+SASS gem to convert SCSS to CSS
+CSS
+HTML</p>
+
+<p>I've used JQuery for DOM parsing and underscore for helper functions. I've tested the core algorithm using Jasmine. The tests can be run and the results can be seen on the SpecRunner.html page. I've used SASS gem to watch and convert index.cscc to index.css. </p>
+
+<h2>
+<a id="running-the-puzzle" class="anchor" href="#running-the-puzzle" aria-hidden="true"><span class="octicon octicon-link"></span></a>Running the puzzle</h2>
+
+<p>Assuming all the dependencies libs and files are present as in the folder structure, launching index.html should be enough to get to the page.  </p>
+
+<p><a href="https://github.com/preethinarayan/sudoku/index.html">Sudoku Puzzle</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Sudoku maintained by <a href="https://github.com/preethinarayan">preethinarayan</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
